@@ -25,6 +25,6 @@ print(paste("casualties:", dim(casualties)[1], "rows,", dim(casualties)[2], "col
 # write_parquet(casualties, "./data/hk_casualties.parquet")
 
 # 或保存为csv格式
-write.csv(collisions, "./inst/app/data/hk_casualties.csv", row.names = True)
-write.csv(vehicles, "./inst/app/data/hk_casualties.csv", row.names = True)
-write.csv(casualties, "./inst/app/data/hk_casualties.csv", row.names = True)
+write.csv(collisions, "./inst/app/data/hk_casualties.csv", row.names = TRUE)
+write.csv(vehicles, "./inst/app/data/hk_casualties.csv", row.names = TRUE)
+write.csv(casualties, "./inst/app/data/hk_casualties.csv", row.names = TRUE)
