@@ -6,21 +6,19 @@
 
 ### 部署步骤
 
-1. 克隆代码库
+1. 运行容器
 ```bash
-git clone https://github.com/your-repo/hk-traffic-collisions.git
+docker run --rm --network host -itd --name r-docker posit/r-base:4.3-jammy
+```
+
+2. 克隆代码库
+```bash
+git clone https://github.com/superboySB/hk-traffic-collisions.git
 cd hk-traffic-collisions
 ```
 
-2. 构建Docker镜像
-```bash
-docker build -t hk-traffic-collisions .
-```
 
-3. 运行容器
-```bash
-docker run -d -p 3838:3838 --name traffic-app hk-traffic-collisions
-```
+
 
 ### 访问应用
 打开浏览器访问：http://localhost:3838/app/
