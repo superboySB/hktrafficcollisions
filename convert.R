@@ -29,4 +29,4 @@ print(paste("casualties:", dim(casualties)[1], "rows,", dim(casualties)[2], "col
 write.csv(collisions, "./inst/app/data/hk_collisions.csv", row.names = TRUE)
 write.csv(vehicles, "./inst/app/data/hk_vehicles.csv", row.names = TRUE)
 write.csv(casualties, "./inst/app/data/hk_casualties.csv", row.names = TRUE)
-write.csv(casualties, "./inst/app/data/data-manipulated/hk_casualties.csv", row.names = TRUE)
+write.csv(casualties, "./inst/app/data/data-manipulated/hotzone_out_df.csv", row.names = TRUE)
