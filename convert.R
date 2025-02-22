@@ -12,6 +12,7 @@ library(fst)
 collisions <- read_fst("./inst/app/data/hk_collisions.fst")
 vehicles <- read_fst("./inst/app/data/hk_vehicles.fst")
 casualties <- read_fst("./inst/app/data/hk_casualties.fst")
+hotzone <- read_fst("./inst/app/data/data-manipulated/hk_casualties.fst")
 
 # 显示数据基本信息
 print("Data summary:")
@@ -28,3 +29,4 @@ print(paste("casualties:", dim(casualties)[1], "rows,", dim(casualties)[2], "col
 write.csv(collisions, "./inst/app/data/hk_collisions.csv", row.names = TRUE)
 write.csv(vehicles, "./inst/app/data/hk_vehicles.csv", row.names = TRUE)
 write.csv(casualties, "./inst/app/data/hk_casualties.csv", row.names = TRUE)
+write.csv(casualties, "./inst/app/data/data-manipulated/hk_casualties.csv", row.names = TRUE)
