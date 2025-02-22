@@ -12,7 +12,7 @@ library(fst)
 collisions <- read_fst("./inst/app/data/hk_collisions.fst")
 vehicles <- read_fst("./inst/app/data/hk_vehicles.fst")
 casualties <- read_fst("./inst/app/data/hk_casualties.fst")
-hotzone <- read_fst("./inst/app/data/data-manipulated/hk_casualties.fst")
+hotzone <- read_fst("./inst/app/data/data-manipulated/hotzone_out_df.fst")
 
 # 显示数据基本信息
 print("Data summary:")
