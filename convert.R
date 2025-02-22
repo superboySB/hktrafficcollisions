@@ -1,5 +1,14 @@
+# convert.R
+
+# 检查并安装必要的包
+if (!require("renv")) install.packages("renv")
+if (!require("fst")) install.packages("fst")
+if (!require("arrow")) install.packages("arrow")
+
+# 加载包
+library(renv)
 library(fst)
-library(arrow)  # 用于保存parquet格式
+library(arrow)
 
 # 读取fst文件
 collisions <- read_fst("./inst/app/data/hk_casualties.fst")
