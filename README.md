@@ -8,15 +8,28 @@
 
 1. 运行容器
 ```bash
-docker run --rm --network host --privileged -itd --name r-docker posit/r-base:4.3-jammy
+docker build -t r-image:v1 .
+docker run --rm --network host --privileged -itd --name r-docker r-image:v1
 docker exec -it r-docker /bin/bash
 ```
 
-2. 克隆代码库
+2. 安装依赖
+```sh
+# 进入R环境
+R
+
+# 在R环境中安装包
+install.packages(c("renv", "fst", "arrow"))
+
+# 退出R环境
+q()
+```
+
+3. 克隆代码库
 ```bash
-cd ~
-git clone https://github.com/superboySB/hk-traffic-collisions.git
+git clone https://github.com/superboySB/hktrafficcollisions.git
 cd hk-traffic-collisions
+Rscript convert.R
 ```
 
 
