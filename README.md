@@ -8,11 +8,13 @@
 
 1. 运行容器
 ```bash
-docker run --rm --network host -itd --name r-docker posit/r-base:4.3-jammy
+docker run --rm --network host --privileged -itd --name r-docker posit/r-base:4.3-jammy
+docker exec -it r-docker /bin/bash
 ```
 
 2. 克隆代码库
 ```bash
+cd ~
 git clone https://github.com/superboySB/hk-traffic-collisions.git
 cd hk-traffic-collisions
 ```
