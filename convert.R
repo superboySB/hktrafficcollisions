@@ -9,8 +9,8 @@ library(renv)
 library(fst)
 
 # 读取fst文件
-collisions <- read_fst("./inst/app/data/hk_casualties.fst")
-vehicles <- read_fst("./inst/app/data/hk_casualties.fst")
+collisions <- read_fst("./inst/app/data/hk_collisions.fst")
+vehicles <- read_fst("./inst/app/data/hk_vehicles.fst")
 casualties <- read_fst("./inst/app/data/hk_casualties.fst")
 
 # 显示数据基本信息
@@ -25,6 +25,6 @@ print(paste("casualties:", dim(casualties)[1], "rows,", dim(casualties)[2], "col
 # write_parquet(casualties, "./data/hk_casualties.parquet")
 
 # 或保存为csv格式
-write.csv(collisions, "./inst/app/data/hk_casualties.csv", row.names = TRUE)
-write.csv(vehicles, "./inst/app/data/hk_casualties.csv", row.names = TRUE)
+write.csv(collisions, "./inst/app/data/hk_collisions.csv", row.names = TRUE)
+write.csv(vehicles, "./inst/app/data/hk_vehicles.csv", row.names = TRUE)
 write.csv(casualties, "./inst/app/data/hk_casualties.csv", row.names = TRUE)
